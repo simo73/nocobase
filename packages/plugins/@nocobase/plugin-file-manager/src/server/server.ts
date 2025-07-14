@@ -15,7 +15,13 @@ import { Collection, Model, Transactionable } from '@nocobase/database';
 import { Plugin } from '@nocobase/server';
 import { Registry } from '@nocobase/utils';
 import { Readable } from 'stream';
-import { STORAGE_TYPE_ALI_OSS, STORAGE_TYPE_LOCAL, STORAGE_TYPE_S3, STORAGE_TYPE_TX_COS } from '../constants';
+import {
+  STORAGE_TYPE_ALI_OSS,
+  STORAGE_TYPE_LOCAL,
+  STORAGE_TYPE_S3,
+  STORAGE_TYPE_TX_COS,
+  STORAGE_TYPE_ORACLE_OSS,
+} from '../constants';
 import initActions from './actions';
 import { AttachmentInterface } from './interfaces/attachment-interface';
 import { AttachmentModel, StorageClassType, StorageModel } from './storages';
@@ -23,6 +29,7 @@ import StorageTypeAliOss from './storages/ali-oss';
 import StorageTypeLocal from './storages/local';
 import StorageTypeS3 from './storages/s3';
 import StorageTypeTxCos from './storages/tx-cos';
+import StorageTypeOracleOss from './storages/oracle-oss';
 import { encodeURL } from './utils';
 
 export type * from './storages';
@@ -225,6 +232,7 @@ export class PluginFileManagerServer extends Plugin {
     this.storageTypes.register(STORAGE_TYPE_ALI_OSS, StorageTypeAliOss);
     this.storageTypes.register(STORAGE_TYPE_S3, StorageTypeS3);
     this.storageTypes.register(STORAGE_TYPE_TX_COS, StorageTypeTxCos);
+    this.storageTypes.register(STORAGE_TYPE_ORACLE_OSS, StorageTypeOracleOss);
 
     const Storage = this.db.getModel('storages');
     Storage.afterSave(async (m, { transaction }) => {

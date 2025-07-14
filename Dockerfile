@@ -32,12 +32,12 @@ RUN CURRENTVERSION="$(jq -r '.version' lerna.json)" && \
   &&  git checkout -b release-$(date +'%Y%m%d%H%M%S') \
   && yarn lerna version ${NEWVERSION} -y --no-git-tag-version
 
-RUN git config user.email "test@mail.com"  \
-    && git config user.name "test" && git add .  \
-    && git commit -m "chore(versions): test publish packages"
-RUN yarn release:force --registry $VERDACCIO_URL
+# RUN git config user.email "mladenovs@gmail.com"  \
+#     && git config user.name "simo73" && git add .  \
+#     && git commit -m "chore(versions): test publish packages"
+#RUN yarn release:force --registry $VERDACCIO_URL
 
-RUN yarn config set registry $VERDACCIO_URL
+#RUN yarn config set registry $VERDACCIO_URL
 WORKDIR /app
 RUN cd /app \
   && yarn config set network-timeout 600000 -g \
