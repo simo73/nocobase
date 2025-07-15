@@ -7,7 +7,7 @@
   "types": "./lib/index.d.ts",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nocobase/nocobase.git",
+    "url": "git+https://github.com/simo73/nocobase.git",
     "directory": "packages/logger"
   },
   "dependencies": {
@@ -18,5 +18,5 @@
     "winston-daily-rotate-file": "^5.0.0",
     "winston-transport": "^4.7.0"
   },
-  "gitHead": "d0b4efe4be55f8c79a98a331d99d9f8cf99021a1"
+  "gitHead": "6761d0e3358b70921a753d4e1b91499d0c6b2423"
 }

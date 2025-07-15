@@ -33,7 +33,7 @@ export default defineConfig({
   themeConfig: defineThemeConfig({
     title: 'NocoBase',
     logo: 'https://www.nocobase.com/images/logo.png',
-    github: 'https://github.com/nocobase/nocobase',
+    github: 'https://github.com/simo73/nocobase',
     footer: 'nocobase | Copyright © 2022',
     // sidebarGroupModePath: ['/components'],
     nav: [

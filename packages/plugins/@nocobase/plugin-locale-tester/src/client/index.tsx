@@ -88,7 +88,7 @@ function LocaleTester() {
           <div
             dangerouslySetInnerHTML={{
               __html: t(
-                `Please go to <a target="_blank" href="https://github.com/nocobase/locales">nocobase/locales</a> to get the language file that needs translation, then paste it below and provide the translation.`,
+                `Please go to <a target="_blank" href="https://github.com/simo73/locales">nocobase/locales</a> to get the language file that needs translation, then paste it below and provide the translation.`,
               ),
             }}
           ></div>

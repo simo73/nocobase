@@ -322,7 +322,7 @@ async function generateChangelog(changelogs) {
 
 async function writeChangelog(cn, en, from, to) {
   const date = new Date().toISOString().split('T')[0];
-  const title = `## [${to}](https://github.com/nocobase/nocobase/compare/${from}...${to}) - ${date}`;
+  const title = `## [${to}](https://github.com/simo73/nocobase/compare/${from}...${to}) - ${date}`;
   const write = async (lang) => {
     const file = lang === 'cn' ? 'CHANGELOG.zh-CN.md' : 'CHANGELOG.md';
     const oldChangelog = await fs.readFile(path.join(__dirname, `../../${file}`), 'utf8');

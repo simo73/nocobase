@@ -13,11 +13,11 @@ export default {
     title: 'NocoBase API documentation',
     description: '',
     contact: {
-      url: 'https://github.com/nocobase/nocobase/issues',
+      url: 'https://github.com/simo73/nocobase/issues',
     },
     license: {
       name: 'Core packages are Apache 2.0 & Plugins packages are AGPL 3.0 licensed.',
-      url: 'https://github.com/nocobase/nocobase#license',
+      url: 'https://github.com/simo73/nocobase#license',
     },
   },
   externalDocs: {
